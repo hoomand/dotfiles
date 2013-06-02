@@ -17,21 +17,6 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'c9s/perlomni.vim'
-Bundle 'kien/ctrlp.vim'
-  map <Leader>t :CtrlPBuffer<CR>
-  let g:ctrlp_map = '<C-t>'
-  let g:ctrlp_working_path_mode = 0 " don’t manage working directory.
-  let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v\c\.(git|svn)$|cgi/t/sandbox|cover_db',
-  \ 'file': '\v\c\.(swf|bak|png|gif|js|mov|ico|jpg|pdf|jrxml)$',
-  \ }
-Bundle 'Lokaltog/vim-powerline'
-  let g:Powerline_symbols = 'fancy'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'mileszs/ack.vim'
-Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'The-NERD-Commenter'
 
 " vim-scripts repos
