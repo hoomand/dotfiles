@@ -39,7 +39,7 @@ set autoindent
 set backspace=indent,eol,start
 set cindent " set smartindent
 set cmdheight=2
-set cursorcolumn
+set nocursorcolumn
 set cursorline
 set errorformat=\"../../%f\"\\,%*[^0-9]%l:\ %m
 set expandtab
@@ -105,4 +105,4 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 autocmd Filetype haml setlocal ts=2 sts=2 sw=2
 autocmd BufRead,BufNewFile *.scss setlocal ts=2 sts=2 sw=2
 
-colorscheme slate 
+colorscheme delek 
