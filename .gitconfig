@@ -1,0 +1,11 @@
+[color]
+	diff = always
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[user]
+	email = hoomand@gmail.com
+	name = Bijan Hoomand
+[core]
+	editor = vim
+[push]
+	default = matching
