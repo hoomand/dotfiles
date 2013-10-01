@@ -19,11 +19,10 @@ GREEN="\[\033[0;32m\]"
 
 export PS1="$BLACK[\u@$RED\h $GREEN\W$RED_BOLD\$(parse_git_branch)\$(parse_svn_branch)$BLACK] "
 
-export PATH=$PATH:/home/bijan/public_html/yii/framework
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+
+
 alias ll="ls -l --color"
+alias subl="/home/bijan/bin/SublimeText2/sublime_text"
