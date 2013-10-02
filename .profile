@@ -25,3 +25,5 @@ export PATH=$PATH:/home/bijan/public_html/yii/framework
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export JAVA_HOME=~/bin/jre1.7.0_25/
