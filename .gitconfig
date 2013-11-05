@@ -7,5 +7,6 @@
 	name = Bijan Hoomand
 [core]
 	editor = vim
+        fileMode = false
 [push]
 	default = matching
