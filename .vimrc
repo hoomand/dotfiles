@@ -18,6 +18,7 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'The-NERD-Commenter'
+Bundle 'The-NERD-tree'
 
 " vim-scripts repos
 "Bundle 'L9'
