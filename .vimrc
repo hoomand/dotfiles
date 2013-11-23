@@ -81,4 +81,13 @@ if &term =~ '256color'
     set t_ut=
 endif
 
+" ctrlp plugin settings
+" Set no max file limit
+let g:ctrlp_max_files = 0
+" 
+let g:ctrlp_cmd = 'CtrlPMixed'
+" Search from current directory instead of project root
+let g:ctrlp_working_path_mode = 0
+" " Ignore these directories
+set wildignore+=*/vendor/**
 colorscheme xoria256
