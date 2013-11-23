@@ -97,4 +97,7 @@ set wildignore+=*/vendor/**
 " Define Ctrl-B shortcut to open buffer select
 nmap <silent> <C-B> :TSelectBuffer<cr>
 
+" Define ,t to open nerdtree
+nmap <silent> <Leader>t :NERDTreeToggle<cr>
+
 colorscheme xoria256
