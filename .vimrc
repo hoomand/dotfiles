@@ -77,4 +77,8 @@ nnoremap <Leader><Leader>r :e ~/.vimrc<CR>
 nmap <F1> <Esc>
 imap <F1> <Esc>
 
+if &term =~ '256color'
+    set t_ut=
+endif
+
 colorscheme xoria256
