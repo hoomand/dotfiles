@@ -20,6 +20,7 @@ Bundle 'gmarik/vundle'
 Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'fugitive.vim'
+Bundle 'ctrlp.vim'
 
 filetype plugin indent on     " required!
 filetype plugin on
