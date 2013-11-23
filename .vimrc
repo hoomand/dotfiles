@@ -21,6 +21,9 @@ Bundle 'The-NERD-Commenter'
 Bundle 'The-NERD-tree'
 Bundle 'fugitive.vim'
 Bundle 'ctrlp.vim'
+" Required by tselectbuffer
+Bundle 'tlib'
+Bundle 'tselectbuffer'
 
 filetype plugin indent on     " required!
 filetype plugin on
@@ -90,4 +93,8 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 0
 " " Ignore these directories
 set wildignore+=*/vendor/**
+
+" Define Ctrl-B shortcut to open buffer select
+nmap <silent> <C-B> :TSelectBuffer<cr>
+
 colorscheme xoria256
