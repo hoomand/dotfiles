@@ -72,6 +72,9 @@ highlight   Visual        term=NONE    cterm=bold ctermbg=10 ctermfg=8
 " :help last-position-jump
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
+" Fix Laravel blade auto indent
+autocmd BufNewFile,BufRead *.blade.php set ft=html | set ft=phtml | set ft=blade
+
 nnoremap <C-L> :noh<CR><C-L>
 inoremap jj <Esc>
 nnoremap <Leader>r :source ~/.vimrc<CR>
