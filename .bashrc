@@ -10,6 +10,9 @@ parse_svn_url() {
 parse_svn_repository_root() {
   svn info 2>/dev/null | sed -ne 's#^Repository Root: ##p'
 }
+svndiff() {
+    svn diff "${@}" | colordiff
+}
 
 BLACK="\[\033[0;38m\]"
 RED="\[\033[0;31m\]"
