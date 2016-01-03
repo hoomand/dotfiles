@@ -1,7 +1,6 @@
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+	eval `ssh-agent -s`
+fi
+
 source ~/.profile
 source ~/.bashrc
-
-if [ -f "/home/bijan/.rvm/scripts/rvm" ]
-then
-    source ~/.rvm/scripts/rvm
-fi
