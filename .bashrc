@@ -24,6 +24,15 @@ export PS1="$BLACK[\u@$RED\h $GREEN\W$RED_BOLD\$(parse_git_branch)\$(parse_svn_b
 export TERM='xterm-256color'
 export PATH=$PATH:vendor/bin
 
+AWS_COMPLETER=`which aws_completer`
+if [[ $? -eq 0 ]]
+then
+	export PATH=$PATH:$AWS_COMPLETER
+	complete -C "$AWS_COMPLETER" aws
+fi
+
+export HOMEBREW_GITHUB_API_TOKEN="bd68b90dc174345d0597014694843eaab055a34d"
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 
