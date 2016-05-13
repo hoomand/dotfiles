@@ -1,3 +1,4 @@
+################################ Functions ##################################################
 parse_git_branch () {
   git name-rev HEAD 2> /dev/null | sed 's#HEAD\ \(.*\)# (git::\1)#'
 }
@@ -20,9 +21,17 @@ RED_BOLD="\[\033[01;31m\]"
 BLUE="\[\033[01;34m\]"
 GREEN="\[\033[0;32m\]"
 
+################################# Exports ###################################################
 export PS1="$BLACK[\u@$RED\h $GREEN\W$RED_BOLD\$(parse_git_branch)\$(parse_svn_branch)$BLACK] "
 export TERM='xterm-256color'
 
+# If  ssh-agent is not running, run it! 
+# or your ssh-add keyfiles are useless
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+	eval `ssh-agent -s`
+fi
+
+# If aws_completer is installed, add it to PATH
 AWS_COMPLETER=`which aws_completer`
 if [[ $? -eq 0 ]]
 then
@@ -30,6 +39,16 @@ then
 	complete -C "$AWS_COMPLETER" aws
 fi
 
+# Set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+export EDITOR=vim
+
+# Without HOMEBREW token, most of your `brew` commands
+# fail as they go over the API limit for anonymous users
 export HOMEBREW_GITHUB_API_TOKEN="bd68b90dc174345d0597014694843eaab055a34d"
 
+################################# Aliases ###################################################
 alias ll="ls -l"
