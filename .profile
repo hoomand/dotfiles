@@ -21,14 +21,4 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-export PATH=$PATH:/home/bijan/public_html/yii/framework
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-# The new laravel installation method
-export PATH="~/.composer/vendor/bin:$PATH"
-
-export JAVA_HOME=~/bin/jre1.7.0_25/
-# Tools like svn need this to know which editor to open by default
 export EDITOR=vim
