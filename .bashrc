@@ -46,6 +46,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+eval "$(rbenv init -)"
+
 export EDITOR=vim
 
 # Without HOMEBREW token, most of your `brew` commands
