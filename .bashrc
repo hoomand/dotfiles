@@ -34,7 +34,7 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 fi
 
 # If aws_completer is installed, add it to PATH
-AWS_COMPLETER=`which aws_completer`
+AWS_COMPLETER=`which aws_completer 2>&-`
 if [[ $? -eq 0 ]]
 then
 	export PATH=$PATH:$AWS_COMPLETER
