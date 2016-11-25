@@ -55,4 +55,12 @@ export EDITOR=vim
 export HOMEBREW_GITHUB_API_TOKEN="bd68b90dc174345d0597014694843eaab055a34d"
 
 ################################# Aliases ###################################################
+# Global aliases I always need
 alias ll="ls -l"
+
+# Include local aliases file.
+# Depending which computer I am using, I like to setup different aliases.
+# The aliases I need at work are different to those I need at home or in theRaspberry Pi!
+if [ -f ~/.aliases ] ; then
+    . ~/.aliases
+fi
