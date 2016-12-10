@@ -51,6 +51,11 @@ if [ -d "$HOME/.rbenv" ] ; then
 	eval "$(rbenv init -)"
 fi
 
+if [ -d "$HOME/.jenv" ] ; then
+    PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+fi
+
 
 export EDITOR=vim
 
