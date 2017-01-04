@@ -73,3 +73,9 @@ alias ll="ls -l"
 if [ -f ~/.aliases ] ; then
     . ~/.aliases
 fi
+
+# If 'thefuck' Python utility is installed, add 'fuck' as an alias!
+# You can install 'thefuck' by typing 'pip install thefuck'
+if hash thefuck 2>/dev/null; then
+    eval $(thefuck --alias)
+fi
