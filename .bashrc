@@ -25,7 +25,7 @@ GREEN="\[\033[0;32m\]"
 export PS1="$BLACK[\u@$RED\h $GREEN\W$RED_BOLD\$(parse_git_branch)\$(parse_svn_branch)$BLACK] "
 export TERM='xterm-256color'
 export SHELL='/bin/bash'
-export PATH=$PATH:/usr/local/bin
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
 # If  ssh-agent is not running, run it! 
 # or your ssh-add keyfiles are useless
