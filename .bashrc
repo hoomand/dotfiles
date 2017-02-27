@@ -67,11 +67,11 @@ export HOMEBREW_GITHUB_API_TOKEN="bd68b90dc174345d0597014694843eaab055a34d"
 # Global aliases I always need
 alias ll="ls -l"
 
-# Include local aliases file.
-# Depending which computer I am using, I like to setup different aliases.
-# The aliases I need at work are different to those I need at home or in theRaspberry Pi!
-if [ -f ~/.aliases ] ; then
-    . ~/.aliases
+# If your $PATH at home computer should be different to your company computer,
+# or aliases on your laptop is differnt to your devbox, here is where you overwrite
+# or add to the main stuff defined in your .bashrc
+if [ -f ~/.bashoverride ] ; then
+    . ~/.bashoverride
 fi
 
 # If 'thefuck' Python utility is installed, add 'fuck' as an alias!
