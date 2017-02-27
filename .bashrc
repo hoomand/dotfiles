@@ -30,7 +30,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 # If  ssh-agent is not running, run it! 
 # or your ssh-add keyfiles are useless
 if [ -z "$SSH_AUTH_SOCK" ] ; then
-	eval `ssh-agent -s`
+    eval `ssh-agent -s`
 fi
 
 # If aws_completer is installed, add it to PATH
