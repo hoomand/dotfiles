@@ -14,3 +14,6 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# add pg-connect and pg-list functions for easy pgsql connection
+source ~/Code/Utils/helpers/pgsql/pgfunctions.sh
