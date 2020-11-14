@@ -10,8 +10,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="pygmalion"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="passion"
 
 plugins=(git zsh-autosuggestions ruby dotenv osx)
 
@@ -33,7 +34,7 @@ eval "$(rbenv init -)"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
-fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
+#fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
 
 # Java SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
