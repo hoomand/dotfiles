@@ -32,7 +32,9 @@ export NVM_DIR="$HOME/.nvm"
 
 
 # Ruby Rbenv
-eval "$(rbenv init -)"
+if command -v rbenv 1>/dev/null 2>&1; then
+    eval "$(rbenv init -)"
+fi
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -42,5 +44,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Python rbenv
-PATH=$(pyenv root)/shims:$PATH
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
