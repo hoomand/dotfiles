@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:~/.toolbox/bin:$HOME/Code/aws/HoomandbMisc/src/HoomandbMisc/scripts/osx_utils:$HOME/.rbenv/bin:$PATH:
+export PATH=$PATH:$HOME/bin:/usr/local/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -36,8 +36,6 @@ if command -v rbenv 1>/dev/null 2>&1; then
     eval "$(rbenv init -)"
 fi
 
-export JAVA_HOME=$(/usr/libexec/java_home)
-
 #fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
 
 # Java SDKMAN
@@ -48,3 +46,12 @@ export SDKMAN_DIR="$HOME/.sdkman"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# Python rbenv
+PATH=$(pyenv root)/shims:$PATH
+
+# Run local aliases for this computer if any
+[[ -s "$HOME/.aliases.sh" ]] && source "$HOME/.aliases.sh"
+
+# Run local env variables for this computer
+[[ -s "$HOME/.envvars.sh" ]] && source "$HOME/.envvars.sh"
