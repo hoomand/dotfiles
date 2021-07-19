@@ -59,10 +59,6 @@ fi
 
 export EDITOR=vim
 
-# Without HOMEBREW token, most of your `brew` commands
-# fail as they go over the API limit for anonymous users
-export HOMEBREW_GITHUB_API_TOKEN="bd68b90dc174345d0597014694843eaab055a34d"
-
 ################################# Aliases ###################################################
 # Global aliases I always need
 alias ll="ls -l"
