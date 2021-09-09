@@ -14,13 +14,11 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="passion"
 
-plugins=(git zsh-autosuggestions ruby dotenv osx)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting ruby dotenv osx)
 
 source $ZSH/oh-my-zsh.sh
 
 DEFAULT_USER=$(whoami)
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # change default auto suggest color
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
@@ -38,9 +36,11 @@ fi
 
 #fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
 
-# Java SDKMAN
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# Run local aliases for this computer if any
+[[ -s "$HOME/.aliases.sh" ]] && source "$HOME/.aliases.sh"
+
+# Run local env variables for this computer
+[[ -s "$HOME/.envvars.sh" ]] && source "$HOME/.envvars.sh"
 
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -50,8 +50,8 @@ fi
 # Python rbenv
 PATH=$(pyenv root)/shims:$PATH
 
-# Run local aliases for this computer if any
-[[ -s "$HOME/.aliases.sh" ]] && source "$HOME/.aliases.sh"
+# Java SDKMAN
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Run local env variables for this computer
-[[ -s "$HOME/.envvars.sh" ]] && source "$HOME/.envvars.sh"
+
