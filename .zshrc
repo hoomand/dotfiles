@@ -25,7 +25,10 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # NodeJS Version Manager
 export NVM_DIR="$HOME/.nvm"
-[ -s $(brew --prefix nvm)/nvm.sh ] && . "$(brew --prefix nvm)/nvm.sh"
+
+if command -v brew 1>/dev/null 2>&1; then
+  [ -s $(brew --prefix nvm)/nvm.sh ] && . "$(brew --prefix nvm)/nvm.sh"
+fi
 
 
 # Ruby Rbenv
@@ -33,7 +36,10 @@ if command -v rbenv 1>/dev/null 2>&1; then
     eval "$(rbenv init -)"
 fi
 
-fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
+
+if command -v cowsay 1>/dev/null 2>&1; then
+  fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
+fi
 
 # Run local aliases for this computer if any
 [[ -s "$HOME/.aliases.sh" ]] && source "$HOME/.aliases.sh"
