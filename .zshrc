@@ -25,8 +25,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=5'
 
 # NodeJS Version Manager
 export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+[ -s $(brew --prefix nvm)/nvm.sh ] && . "$(brew --prefix nvm)/nvm.sh"
 
 
 # Ruby Rbenv
@@ -34,7 +33,7 @@ if command -v rbenv 1>/dev/null 2>&1; then
     eval "$(rbenv init -)"
 fi
 
-#fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
+fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
 
 # Run local aliases for this computer if any
 [[ -s "$HOME/.aliases.sh" ]] && source "$HOME/.aliases.sh"
@@ -45,10 +44,9 @@ fi
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+  PATH=$(pyenv root)/shims:$PATH
 fi
 
-# Python rbenv
-PATH=$(pyenv root)/shims:$PATH
 
 # Java SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
