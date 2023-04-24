@@ -42,7 +42,7 @@ if command -v cowsay 1>/dev/null 2>&1; then
 fi
 
 # Run local aliases for this computer if any
-[[ -s "$HOME/.aliases.sh" ]] && source "$HOME/.aliases.sh"
+[[ -s "$HOME/.shelloverrides.sh" ]] && source "$HOME/.shelloverrides.sh"
 
 # Run local env variables for this computer
 [[ -s "$HOME/.envvars.sh" ]] && source "$HOME/.envvars.sh"
