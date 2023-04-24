@@ -41,12 +41,6 @@ if command -v cowsay 1>/dev/null 2>&1; then
   fortune -a | cowsay -f `cowsay -l | tail -n +2 | tr " " "\n" | sort -R | head -n 1`
 fi
 
-# Run local aliases for this computer if any
-[[ -s "$HOME/.shelloverrides.sh" ]] && source "$HOME/.shelloverrides.sh"
-
-# Run local env variables for this computer
-[[ -s "$HOME/.envvars.sh" ]] && source "$HOME/.envvars.sh"
-
 # pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -57,5 +51,11 @@ fi
 # Java SDKMAN
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+
+# Keep this the last line
+# Run local overrides for this computer if any
+[[ -s "$HOME/.shelloverrides.sh" ]] && source "$HOME/.shelloverrides.sh"
 
 
