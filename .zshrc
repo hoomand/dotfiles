@@ -4,20 +4,6 @@ export PATH=$PATH:$HOME/bin:/usr/local/bin:$GOPATH/bin
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="pygmalion"
-#ZSH_THEME="agnoster"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="passion"
-
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting ruby dotenv macos)
-
-source $ZSH/oh-my-zsh.sh
-
 DEFAULT_USER=$(whoami)
 
 # change default auto suggest color
@@ -54,8 +40,10 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 
 
-# Keep this the last line
+################# Do NOT Add Below This Line ###################
 # Run local overrides for this computer if any
 [[ -s "$HOME/.shelloverrides.sh" ]] && source "$HOME/.shelloverrides.sh"
 
-
+ZSH_THEME="robbyrussell"
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting ruby dotenv macos)
+source $ZSH/oh-my-zsh.sh
